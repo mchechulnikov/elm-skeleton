@@ -1,12 +1,5 @@
--- Press a button to generate a random number between 1 and 6.
---
--- Read how it works:
---   https://guide.elm-lang.org/effects/random.html
---
-
 import Browser
 import Html exposing (..)
-import Html.Events exposing (..)
 
 
 
@@ -27,15 +20,13 @@ main =
 
 
 type alias Model =
-  { dieFace : Int
+  {
   }
 
 
 init : () -> (Model, Cmd Msg)
 init _ =
-  ( Model 1
-  , Cmd.none
-  )
+  (Model, Cmd.none)
 
 
 
@@ -43,17 +34,14 @@ init _ =
 
 
 type Msg
-  = NewFace Int
+  = Roll
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-
-    NewFace newFace ->
-      ( Model newFace
-      , Cmd.none
-      )
+    Roll ->
+      (model, Cmd.none)
 
 
 
@@ -61,7 +49,7 @@ update msg model =
 
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
   Sub.none
 
 
@@ -71,7 +59,4 @@ subscriptions model =
 
 view : Model -> Html Msg
 view model =
-  div []
-    [ h1 [] [ text (String.fromInt model.dieFace) ]
-    , button [ onClick Roll ] [ text "Roll" ]
-    ]
+  div [] []
