@@ -1,4 +1,4 @@
-# Consonance
+# Elm Skeleton
 Empty Elm project with useful scripts
 
 ## How to run locally
