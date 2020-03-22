@@ -1,5 +1,5 @@
 # Consonance
-Deep diving tool into guitar fingering structure and musical systems via functional programming
+Empty Elm project with useful scripts
 
 ## How to run locally
 ### Docker way
